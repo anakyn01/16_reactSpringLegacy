@@ -40,7 +40,9 @@ function Shop2() {
                   <h5 className="card-title">{product.title}</h5>
                   <p className="card-text text-truncate">{product.description}</p>
                   <p className="card-text fw-bold">${product.price}</p>
-                  <button className="btn btn-primary">장바구니</button>
+                  <div className='d-flex justify-content-end'>
+                  <button className="btn btn-outline-primary">장바구니</button>
+                  </div>
                 </div>
               </div>
             </div>

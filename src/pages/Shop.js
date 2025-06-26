@@ -27,11 +27,11 @@ const Shop = () => {
                     {loading ? (
                         <p>로딩 중...</p>
                     ) : (
-                        <ListGroup>
+                        <ListGroup horizontal>
                             {shops.map((shop) => (
-                                <ListGroup.Item key={shop.id}>
+                                <ListGroup.Item key={shop.id}  className="border-0">
                                     <Card>
-                                        <Card.Img variant="top" src={shop.imageUrl} />
+                                        <Card.Img variant="top" src={shop.imageUrl} className="thumb"/>
                                         <Card.Body>
                                             <Card.Title>{shop.name}</Card.Title>
                                             <Card.Text>{shop.location}</Card.Text>

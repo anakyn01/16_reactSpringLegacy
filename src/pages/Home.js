@@ -17,7 +17,7 @@ const Home = () => {
   <Container>
     <Row>
       <Col>
-      <h1>{message}</h1>
+      <h1 className="mt-4 mb-2">{message}</h1>
       </Col>
     </Row>
   </Container>

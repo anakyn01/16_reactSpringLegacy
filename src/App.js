@@ -7,6 +7,7 @@ import Shop from "./pages/Shop";
 import Shop2 from "./pages/Shop2";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import './css/style.scss';
 
 
 function App() {
