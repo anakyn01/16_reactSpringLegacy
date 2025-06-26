@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, ListGroup,Card } from "react-bootstrap";
+
 
 const Shop = () => {
     const [shops, setShops] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // API 호출
         fetch("http://localhost:8080/api/getShops")
-            .then((response) => response.json())  // JSON 형식으로 응답 처리
+            .then((response) => response.json())
             .then((data) => {
                 setShops(data);
-                setLoading(false);  // 데이터 로딩이 끝났음을 표시
+                setLoading(false);
             })
             .catch((error) => {
                 console.error("Error fetching shops:", error);
@@ -23,15 +23,20 @@ const Shop = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1>쇼핑몰 목록</h1>
+                    <h1 className="mt-4 mb-2">쇼핑몰 목록</h1>
                     {loading ? (
                         <p>로딩 중...</p>
                     ) : (
                         <ListGroup>
                             {shops.map((shop) => (
                                 <ListGroup.Item key={shop.id}>
-                                    <h5>{shop.name}</h5>
-                                    <p>{shop.location}</p>
+                                    <Card>
+                                        <Card.Img variant="top" src={shop.imageUrl} />
+                                        <Card.Body>
+                                            <Card.Title>{shop.name}</Card.Title>
+                                            <Card.Text>{shop.location}</Card.Text>
+                                        </Card.Body>
+                                    </Card>
                                 </ListGroup.Item>
                             ))}
                         </ListGroup>
@@ -41,4 +46,5 @@ const Shop = () => {
         </Container>
     );
 };
+
 export default Shop;
