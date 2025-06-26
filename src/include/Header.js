@@ -24,6 +24,7 @@ const Header = () => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/shop">shop</Nav.Link>
+                  <Nav.Link href="/shop2">shop2</Nav.Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
