@@ -21,7 +21,7 @@ function Shop2() {
 
   return (
     <div className="container mt-4">
-      <h1 className="mb-4">🛒 쇼핑몰 상품 목록</h1>
+      <h1 className="mb-4">🛒 쇼핑몰 상품 목록 react에서 api받은것</h1>
 
       {loading ? (
         <p>상품을 불러오는 중입니다...</p>
